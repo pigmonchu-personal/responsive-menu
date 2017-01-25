@@ -1,0 +1,37 @@
+{
+  "name": "responsive-menu",
+  "version": "1.0.0",
+  "description": "responsive web menu. Only css",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pigmonchu-personal/responsive-menu.git"
+  },
+  "keywords": [
+    "web",
+    "responsive",
+    "menu",
+    "css"
+  ],
+  "author": "Mon Maldonado, pigmonchu@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pigmonchu-personal/responsive-menu/issues"
+  },
+  "homepage": "https://github.com/pigmonchu-personal/responsive-menu#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.6",
+    "browserify": "^13.3.0",
+    "gulp": "^3.9.1",
+    "gulp-buffer": "0.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.0",
+    "gulp-tap": "^0.1.3",
+    "gulp-uglify": "^2.0.0"
+  }
+}

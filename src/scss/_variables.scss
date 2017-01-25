@@ -1,0 +1,39 @@
+
+// font families
+$main-font-family: "Montserrat", sanserif;
+$titles-font-family: "Roboto Mono", monospace;
+
+// font sizes
+$font-size-base: 16px;
+$font-size-small: $font-size-base * 0.825;
+$font-size-large: $font-size-base * 1.425;
+$font-size-h1: $font-size-base * (1 + 0.18 * 5); 
+$font-size-h2: $font-size-base * (1 + 0.18 * 4);
+$font-size-h3: $font-size-base * (1 + 0.18 * 3);
+$font-size-h4: $font-size-base * (1 + 0.18 * 2);
+$font-size-h5: $font-size-base * (1 + 0.18); 
+$font-size-h6: $font-size-base; 
+
+// colors
+$primary-color: #0FBCD4;
+$background-color: white;
+$text-color: black;
+$gray-color: #CFCFCF;
+
+$default-text-color: $primary-color;
+$default-background-color: $background-color;
+
+$inverse-text-color: $default-background-color;
+$inverse-background-color: $default-text-color;
+
+// responsive breakpoints
+$large-screen-width: 1024px; //iPad apaisado o superior
+$medium-screen-width: 768px; //iPad vertical
+$small-screen-width: $medium-screen-width - 1; //móviles
+$large-screen-container-width: 1200px; //Si apetece que la página tenga un ancho máximo
+
+//border radius
+$default-border-radius: 2px;
+
+
+

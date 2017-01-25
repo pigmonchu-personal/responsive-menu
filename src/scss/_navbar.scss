@@ -1,0 +1,100 @@
+//
+// Variables
+//
+
+$navbar-height: 42px;
+$content-menu: 'Menú';
+$content-close: 'X';
+$width-item-menu: 100px;
+
+/*
+    Esqueleto del menú
+*/
+
+.navbar {
+    @include pull-top; 
+    background-color: lighten($primary-color, 50%);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: $navbar-height;
+
+    .logo, label {
+        display: inline-block;
+    }
+    
+    .logo {
+        padding:0.8em 0.6em;
+        @include pull-top; 
+    }
+
+    .main-menu {
+        z-index: 1;
+        transform: translateY(calc(-100% - 42px));
+        transition: transform 0.3s;
+
+        @include if-is-large-screen {
+            transform: none;
+            display: inline;
+            margin: 4px 10px 0 0;
+            float: right;
+        }
+
+        li {
+            padding: 0.6em;
+            text-align: center;
+            text-transform: uppercase;
+            background-color: lighten($primary-color, 50%);
+
+            @include if-is-large-screen {
+                display: inline-block;
+                width: $width-item-menu;
+                text-align: left;
+            }
+
+            &.item {
+                cursor: pointer;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }    
+        }
+    }
+
+    label {
+        float: right;
+        @include pull-top; 
+        margin: 8px 10px 0 0;
+        padding: 5px;
+        border: 1px solid $primary-color;
+        border-radius: $default-border-radius;
+        font-size: $font-size-small;
+        &::after {
+            content: $content-menu;
+        }
+
+        @include if-is-large-screen {
+            display: none;
+        }
+
+
+    }
+
+    .menu-button {
+        display:none;
+        
+        &:checked ~ .main-menu {
+            transform: translateY(0);
+        }
+
+        &:checked ~ label {
+            color: $background-color;
+            background: $primary-color;
+            &::after {
+                content: $content-close;
+            }
+        }
+
+    }
+
+}

@@ -1,0 +1,49 @@
+.clearfix {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.container {
+    @media all and(min-width: $large-screen-container-width) {
+        padding: 0 15px;
+        margin-left: auto;
+        margin-right: auto;
+        width: $large-screen-container-width; 
+    }
+}
+
+@mixin text-ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@mixin pull-top {
+    position: relative;
+    z-index: 999;
+}
+
+//responsive utilities
+@mixin if-is-large-screen {
+    @media all and (min-width: #{$large-screen-width}) {
+        @content;
+    }
+}
+
+@mixin if-is-medium-screen {
+    @media all and (min-width: #{$medium-screen-width}) {
+        @content;
+    }
+}
+
+@mixin if-is-small-screen {
+    @media all and (max-width: #{$small-screen-width}) {
+        @content;
+    }
+} 
